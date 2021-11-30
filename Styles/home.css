@@ -18,6 +18,18 @@ a {
     position: relative;
 }
 
+#underConstruction {
+    background-color: burlywood;
+    height: 40px;
+    padding: 10px 0 10px 0;
+}
+
+#underConstruction h3{
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
 /* NAV BAR */
 
 .navBar {
@@ -106,6 +118,7 @@ header {
 
 button {
     font-family: "Space Mono", monospace;
+    padding-bottom: 5px;
     letter-spacing: 1px;
     background: none;
     color: white;
@@ -126,7 +139,7 @@ button {
     left: 0;
     top: 0;
     height: 100%;
-    width: 56.5%;
+    width: 50%;
     background: #F6BB25;
     z-index: -1;
     transition: 0.3s ease-in all;
@@ -153,6 +166,55 @@ button {
     width: 70%;
   }
 
+  .icon-right:after {
+    font-family: "FontAwesome";
+    content: "→";
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 9px;
+  }
+
+  /* .icon-right {
+    position: absolute;
+    right: 17px;
+  } */
+ 
+
+  @keyframes changewidth {
+    from {
+        left: 9px;
+    }
+    10% {
+        left: 18px;  
+    }
+    25% {
+        left: 7px;
+    }
+    35% {
+        left: 9px;
+    }
+    to {
+        left: 9px;
+    }
+  }
+
+  .icon-right:after {
+    animation-duration: 3s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite; 
+    animation-direction: normal;
+  }
+  
+  /* button:after { */
+    /* animation: move 6s infinite forwards; */
+    /* animation-duration: 6s;
+    animation-name: changewidth;
+    animation-iteration-count: infinite; 
+    animation-direction: normal;
+} */
+
 /* ANIMATED BTN - END */
 
 /* SOCIAL ICONS */
@@ -164,7 +226,7 @@ button {
     justify-items: end;
 }
 
-.socialIcons img {
+.socialIcons div img {
     filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(357deg) brightness(112%) contrast(101%);
 }
 
@@ -182,21 +244,24 @@ button {
 
 .socialIcons div{
     position: relative;
-    width: 17px;
+    width: 25px;
     height: 20px;
 }
 
-.socialIcons div img {
+.socialIcons div a {
     position:absolute;
-    width: 100;
+    width: 100%;
     top: 0;
 }
 
-.socialIcons div:hover img {
+.socialIcons div:hover a {
     cursor: pointer;
     top: -1px;
-    transition: 0.2s;
-    filter: invert(70%) sepia(98%) saturate(422%) hue-rotate(345deg) brightness(101%) contrast(93%);
+    transition: 0.3s;
+}
+
+.socialIcons div a:hover img {
+    filter: invert(74%) sepia(86%) saturate(509%) hue-rotate(340deg) brightness(101%) contrast(93%);
 }
 
 /* .socialIcons div::after {
@@ -210,19 +275,6 @@ button {
 } */
 
 /* SOCIAL ICONS - END */
-
-  .icon-right {
-    position: absolute;
-    right: 17px;
-  }
-  .icon-right:after {
-    font-family: "FontAwesome";
-    content: "→";
-    font-size: 24px;
-    display: inline-block;
-    position: relative;
-    top: -5px;
-  }
 
 .aboutDown {
     margin: 0;
