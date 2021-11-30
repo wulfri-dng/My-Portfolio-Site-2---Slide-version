@@ -257,7 +257,7 @@ button {
 .socialIcons div:hover a {
     cursor: pointer;
     top: -1px;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .socialIcons div a:hover img {
