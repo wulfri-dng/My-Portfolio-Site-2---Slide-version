@@ -234,7 +234,7 @@ button {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: end;
-}a
+}
 
 .socialIcons div img {
     filter: invert(84%) sepia(100%) saturate(0%) hue-rotate(357deg) brightness(112%) contrast(101%);
