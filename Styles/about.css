@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 
 body {
@@ -10,10 +10,245 @@ body {
     font-weight: 200;
     margin: 0;
     height: 100vh;
-    background-color: #1B1F20;
+    background-color: #FFFF;
 }
 
 a {
     text-decoration: none;
     position: relative;
+}
+
+#underConstruction {
+    background-color: burlywood;
+    height: 40px;
+    padding: 10px 0 10px 0;
+}
+
+#underConstruction h3{
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+/* NAV BAR */
+
+.navBar {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 1px;
+    height: 7vh;
+    width: 370px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+    justify-items: center;
+}
+
+.navBar a:after {
+    content: "";
+    position: absolute;
+    top: 20PX;
+    left: 2%;
+    background-color: #F6BB25;
+    height: 1px;
+    width: 0%;
+}
+
+.navBar a:hover:after {
+    transition: 0.3s 0.1s ease-out all;
+    width: 60%;
+}
+
+.navBar a:nth-child(2)::after {
+    width: 92%;
+}
+
+/* NAV BAR - END */
+
+header {
+    display: grid;
+    width:100%;
+    height: 86vh;
+    margin: auto;
+    grid-template-columns: 1fr 6fr 15fr;
+    align-items: center;
+}
+
+.leftCornerSide {
+    border-right: 1px solid black;
+    height: 100%;
+}
+
+/* LEFT CORNER SECTION */
+
+.leftCornerSide {
+
+}
+
+/* LEFT CORNER SECTION - END */
+
+/* LEFT SECTION */
+
+.leftSide  {
+    text-align: end;
+    border-right: 2px solid black;
+    padding-right: 10%;
+    padding-left: 10%;
+}   
+
+.nameAndAbout {
+    
+}
+
+.nameAndAbout h1 {
+    font-family: 'Questrial', sans-serif;
+    color: #010101;
+    font-size: 55px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.nameh1Div {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.underLineH1 {
+    transition:ease-in 0.7s;
+    position: absolute;
+    right: 4px;
+    top: 55px;
+    height: 2px;
+    width: 175px;
+    background-color: #F6BB25;
+}
+
+.leftSide:hover .underLineH1 {
+    transition:ease-out 0.5s;
+    width: 257px;
+}
+
+.nameAndAbout p {
+    font-weight: 400;
+}
+
+.contctDetails p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    letter-spacing: 1.45px;
+}
+
+.contctDetails div p:nth-child(1) {
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.contctDetails div p:nth-child(2) {
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+.personalSection {
+    position: relative;
+}
+
+.underLinePersonalDetails {
+    position: absolute;
+    right: 2px;
+    top: 39px;
+    height: 2px;
+    width: 50px;
+    background-color: #F6BB25;
+}
+
+/* LEFT SECTION - END */
+
+/* RIGHT SECTION */
+
+.rightSide {
+    background-color: #1B1F20;
+    margin: 0 5% 0 5%;
+    padding: 4% 5%;
+    height: 82%;
+}
+
+.topSection {
+    border: 1px solid white;
+    margin-bottom: 4%;
+    height: 19%;
+    padding: 20px 40px;
+}
+
+.bottomSection {
+    border: 1px solid white;
+    margin-bottom: 4%;
+    height: 75%;
+    padding: 20px 40px;
+}
+
+
+.rightInnerSection {
+    position: relative;
+    margin-bottom: 42px;
+}
+
+.yelloLine {
+    position: absolute;
+    width: 25px;
+    height: 1.5px;
+    background-color: #F6BB25;
+    top: 9px;
+}
+
+.rightInnerSection p {
+    color: white;
+    font-family: 'Questrial', sans-serif;
+}
+
+.rightInnerSection p:nth-child(1) {
+    padding-left: 40px;
+    margin-bottom: 0px;
+}
+
+.rightInnerSection p:nth-child(2) {
+    padding-left: 70px;
+    margin-top: 12px;
+}
+
+/* RIGHT SECTION - END */
+
+/* FOOter section */
+footer {
+    height: 7vh;
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    margin: auto;
+    font-size: 0.6em;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+footer div {
+    border-top: 1px solid #1B1F20;
+    width: 560px;
+    display: grid;
+    justify-items: center;
+}
+
+footer p {
+    margin: 14px 0 0 0;
+}
+
+footer p span {
+    padding-right: 6px;
+}
+
+footer p span img{
+    width: 7px;
+    filter: invert(31%) sepia(92%) saturate(979%) hue-rotate(326deg) brightness(81%) contrast(88%);
 }
