@@ -38,10 +38,10 @@ a {
     line-height: 21px;
     letter-spacing: 1px;
     height: 7vh;
-    width: 370px;
+    width: 490px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: end;
     justify-items: center;
 }
