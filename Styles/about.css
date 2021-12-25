@@ -67,7 +67,7 @@ a {
 
 /* NAV BAR - END */
 
-header {
+#aboutSection {
     display: grid;
     width:100%;
     height: 86vh;
