@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles/home.css">
+    <link rel="icon" href="Src/logo_transparent.png">
     <title>wulfri__</title>
 </head>
 
 <body>
-    <div id="underConstruction">
-        <h3>Website under construction. Please come back later.</h3>
-    </div>
     <header id="topSection">
+
         <div class="navBar">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a> 
-            <a href="#contact">Contact</a> 
-            <a href="https://ztechlk.com/author/danusha-navod/" target="_blank" rel="noopener noreferrer">Blog</a> 
+            <div class="navContainer">
+                <a onclick="scrollToHome()">Home</a>
+                <a onclick="scrollToAbout()">About</a> 
+                <a href="#contact">Contact</a> 
+                <a href="https://ztechlk.com/author/danusha-navod/" target="_blank" rel="noopener noreferrer">Blog</a> 
+            </div>
         </div>
         <div id="topContainer">
             <div class="leftSide">
@@ -32,7 +33,7 @@
                         imtsbus vulputatedf dlis luctus condimentum quisdffdgd dsdsdfd ssd ds.</p>
                 </div>
                 <div class="aboutTop">
-                    <button onclick="visitAbout()" class="explore">About Me<span class="icon-right after"></span></button>
+                    <button onclick="scrollToAbout()" class="explore">About Me<span class="icon-right after"></span></button>
                     <div class="socialIcons">
                         <div><a href="https://www.linkedin.com/in/danusha-navod/" target="_blank" rel="noopener noreferrer"><img src="Src/linkedin-in-brands.svg" alt=""></a></div>
                         <div><a href="https://twitter.com/danusha_navod" target="_blank" rel="noopener noreferrer"><img src="Src/twitter-brands.svg" alt=""></a></div>
@@ -149,6 +150,22 @@
         function visitAbout() {
             document.location.href = "about.html"
         }
+        function scrollToHome() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        function scrollToAbout() {
+            document.body.scrollTop = 1100;
+            document.documentElement.scrollTop = 1100;
+        }
+        document.addEventListener("scroll",(event) => {
+        if(this.scrollY> 80){
+            document.querySelector(".navBar").classList.add("navBar-scrolled");
+        }
+        else{
+            document.querySelector(".navBar").classList.remove("navBar-scrolled");
+            }
+        });
     </script>
 </body>
 

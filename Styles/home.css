@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     color: white;
@@ -32,6 +36,27 @@ a {
 /* NAV BAR */
 
 .navBar {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    transition: 0.2s 0.1s ease-out all;
+}
+
+.navBar-scrolled {
+    background-color: #1B1F20;
+    opacity: 95%;
+    margin-top: 0;
+    /* height: 50px;
+    padding-bottom: 20px; */
+    /* z-index: 100;
+    position: fixed;
+    width: 100%;
+    background-color: white; */
+    transition: 0.2s 0.1s ease-out all
+}
+
+.navContainer {
     font-size: 15px;
     font-weight: 300;
     line-height: 21px;
@@ -43,7 +68,7 @@ a {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: end;
+    align-items: center;
     justify-items: center;
 }
 
@@ -55,6 +80,10 @@ a {
     background-color: #F6BB25;
     height: 1px;
     width: 0%;
+}
+
+.navBar a:hover {
+    cursor: pointer;
 }
 
 .navBar a:hover:after {
@@ -79,6 +108,7 @@ a {
     width: 87%;
     height: 86vh;
     margin: auto;
+    padding-top: 100px;
     grid-template-columns: 60% 40%;
 }
 
